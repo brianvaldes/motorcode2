@@ -50,7 +50,7 @@ void loop() {
      }
    }
 
-   // set the LED:
+   // set the motor:
    analogWrite(motorPin, motorState);
    
    
