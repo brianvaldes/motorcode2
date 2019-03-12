@@ -43,17 +43,16 @@ void loop() {
 
        // only toggle the LED if the new button state is HIGH
        if (buttonState == HIGH) {
-         motorState = !motorState;
+         motorState+=50;
+   if(motorState>255)
+    motorState=0;
        }
      }
    }
 
    // set the LED:
    analogWrite(motorPin, motorState);
-   motorState+=50;
-   if(motorState>255){
-    motorState=0;
-   }
+   
    
 
    // save the reading. Next time through the loop, it'll be the lastButtonState:
